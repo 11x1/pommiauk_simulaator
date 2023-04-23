@@ -4,8 +4,8 @@ from constants import *
 import game
 
 pygame.init( )
-screen = pygame.display.set_mode( SIZE )
-surface = pygame.Surface( SIZE )
+screen = pygame.display.set_mode( ( SIZE.x * 2, SIZE.y * 2 ) )
+surface = pygame.Surface( SIZE.tuple )
 
 clock = pygame.time.Clock( )
 
@@ -29,9 +29,9 @@ while True:
         for ( idx_x, pixel_data ) in enumerate( row ):
             surface.set_at( ( idx_x, idx_y ), pixel_data )
 
-    screen.blit( surface, WINDOW_START )
+    screen.blit( surface, WINDOW_START.tuple )
 
     pygame.display.update( )
 
-    clock.tick( 30 )
+    clock.tick( FPS )
 

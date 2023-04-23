@@ -1,9 +1,13 @@
+from game_types.vector import Vector
+
 WIDTH = 400
 HEIGHT = 300
 
-SIZE = ( WIDTH, HEIGHT )
-WINDOW_START = ( 0, 0 )
+FPS = 60
 
-BLOCK_SIZE = ( 10, 10 )
+SIZE = Vector( WIDTH, HEIGHT )
+WINDOW_START = Vector( 0, 0 )
 
-GRAVITY = 2
+BLOCK_SIZE = Vector( 10, 10 )
+
+GRAVITY = 2 / FPS
