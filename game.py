@@ -55,8 +55,9 @@ class GameData:
 
                 block_color = block_obj.get_as_pixel( )
 
-                for _y in range( step.y ):
-                    for _x in range( step.x ):
+                # Block size has to be colored according to the block's color
+                for _y in range( BLOCK_SIZE.y ):
+                    for _x in range( BLOCK_SIZE.x ):
                         map_pixel_data[ y_index + _y ][ x_index + _x ] = block_color
 
         for explosive in self.explosives:
